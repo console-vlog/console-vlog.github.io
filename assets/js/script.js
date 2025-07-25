@@ -3,13 +3,13 @@ function getEtalase(){
   $('#data-produk').html('');
   $('#loading').show();
   $.ajax({
-    url: 'http://gsx2json.com/api?id=1AH4L7a1wloY9qzehffZqcS-UrK08uKnbFTthMNR5JVI&sheet=produk_shopee',
+    url: 'https://script.google.com/macros/s/AKfycbzr6jYxSKFOb4jHh_l96aJebTHs4ZDNVGa-u0KU9qMoHPCbWFhoABQGiGJQQ9IMMu-e/exec?sheet=produk_shopee',
     type: 'GET',
     dataType: 'json',
     data: {},
     success:function(s){
       console.log(s);
-      let data = s.rows;
+      let data = s;
       data.forEach((d,i) => {
         $('#data-produk').append(`
           <div class="col-md-3">
